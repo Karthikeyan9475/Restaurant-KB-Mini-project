@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaiyendi Bhavan</title>
+    <link rel="stylesheet" href="styles.css">
+    <!---title icon-->
+    <link rel="icon" type="image/png" href="images/noun-chicken-195394 (1).png">
+    <!--css link-->
+    <link rel="stylesheet" href="styles.css">
+    <!--font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <style>
+        .top-search-bar .fa-search {
+            color: #f53b57;
+        }
+
+        .about-center {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product-text {
+            max-width: 100%;
+            text-align: justify;
+            padding: 10px 40px;
+            text-indent: 200px;
+        }
+        .product .img-container{
+            width:15rem;
+        }
+        .slider-container{
+            display: flex;
+            flex-direction: row;
+            width: 90vw;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+            z-index: 1;
+        }
+        .anglebtn{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            outline: none;
+            border: none;
+            background-color: transparent;
+            color: #102a42;
+            position: relative;
+        }
+        .angleleft{
+            position: absolute;
+            top:25px;
+            left:20px;
+            transform: translate(-50%,-50%);
+        }
+        .angleright{
+            position: absolute;
+            top:25px;
+            left:20px;
+            transform: translate(-50%,-50%);
+        }
+.product-inventory{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap:10px;
+    margin: 10px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    height: 330px;
+    width: 100%;
+    scroll-behavior:smooth;
+}
+.product-inventory .active {
+    cursor: grabbing;
+}
+.product-inventory {
+    user-select: none; /* For most browsers */
+    -webkit-user-select: none; /* For Safari */
+    -moz-user-select: none; /* For Firefox */
+    -ms-user-select: none; /* For IE/Edge */
+}
+
+.bg{
+    background-color: var(--clr-grey-3);
+    padding: 10px;
+}
+.section-center{
+    display: block;
+    gap:20px;
+}
+@media screen and (min-width:700px){
+}
+@media screen and (min-width:1000px){
+}
+    </style>
+
+
+    <!------header of product section-->
+    <div class="top-header">
+        <!--menu button-->
+        <div class="nav-btn">
+            <label for="nav-check">
+                <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px"
+                    fill="#5f6368">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                </svg>
+            </label>
+        </div>
+
+
+        <!----search bar-->
+        <div class="top-search-bar">
+            <i class="fa fa-search"></i>
+            <input type="search" placeholder="Search Food here" />
+        </div>
+
+
+        <!---cart-->
+        <div class="cart-btn">
+            <a><i class="fa-solid fa-cart-plus"></i></a>
+        </div>
+    </div>
+
+    <!---checkbox-->
+    <input type="checkbox" id="nav-check" />
+
+    <!---overlay-->
+    <label for="nav-check" class="overlay"></label>
+
+    <!--Nav bar-->
+    <nav class="navbar">
+        <div class="navbar-header">
+            <h3>Kaiyendhi Bhavan</h3>
+            <img src="images/Brucelee1.png" alt="" />
+            <label for="nav-check">
+                <i class="nav-close fa-solid fa-xmark"></i>
+            </label>
+        </div>
+        <ul class="nav-items">
+            <li><a href="index.html" class="nav-links">Home</a></li>
+            <li><a href="#about" class="nav-links">About</a></li>
+            <li><a href="product.html" class="nav-links">Product</a></li>
+        </ul>
+    </nav>
+
+    <!-----------------------------products------------------------------------>
+    <section class="section-title bg" id="product">
+        <div class="about-center">
+
+            <!--About product-->
+            <div class="product-info">
+                <div class="product-title">
+                    <h3>Check Out</h3>
+                    <h2>Our Recipe</h2>
+                </div>
+                <p class="product-text">
+                    At Kaiyendi Bhavan, our signature recipe for parota is all about delivering authentic street food
+                    flavors with the perfect balance of taste and texture. We start by using the finest maida, kneading
+                    it into a soft, elastic dough. After letting it rest, we roll and layer the dough to create the
+                    classic flaky texture that parota lovers crave. Each parota is pan-fried to golden perfection,
+                    ensuring a crispy exterior and a soft, chewy inside. Served hot with our homemade salna or flavorful
+                    curries, our parota is a delicious, filling meal that keeps our customers coming back for more!
+                </p>
+            </div>
+
+
+            <!---product-->
+            <!----------produc-inventory 1--------->
+            <h3 class="food-header">Special</h3>
+            <div class="slider-container">
+                <button class="anglebtn" id="prev"><i class="angleleft fa-solid fa-angle-left"></i></button>
+
+                <div class="product-inventory" id="productInventory">
+                    <!--parota-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/parota.avif" alt="parota" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Parota</h4>
+                        <h4 class="product-price">&#8377;15</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--fried rice-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/friedrice.webp" alt="friedrice" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Fried rice</h4>
+                        <h4 class="product-price">&#8377;100</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--Chicken Noodles-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/noodles.jpg" alt="noddles" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Chicken Noodle</h4>
+                        <h4 class="product-price">&#8377;100</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--Muttaipodimass-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/podimass.jpg" alt="podimass" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Muttai Podimass</h4>
+                        <h4 class="product-price">&#8377;30</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--tandoori-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/tandoori.jfif" alt="tandoori" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Tandoori</h4>
+                        <h4 class="product-price">&#8377;300</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--pav-bhaji-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/pav-bhaji.webp" alt="pav-bhaji" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Pav Bhaji</h4>
+                        <h4 class="product-price">&#8377;30</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+                </div>
+
+                <button class="anglebtn" id="next"><i class="angleright fa-solid fa-angle-right"></i></button>
+            </div>
+
+
+            <!--------------product-inventory-2------------>
+            <h3 class="food-header">Morning Special</h3>
+            <div class="slider-container">
+                <button class="anglebtn" id="prev"><i class="angleleft fa-solid fa-angle-left"></i></button>
+
+                <div class="product-inventory" id="productInventory">
+                    <!--plain dosai-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/dosai.jfif" alt="plaindosa" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Plain Dosai</h4>
+                        <h4 class="product-price">&#8377;20</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--rava dosai-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/rava-masala-dosa.jpg" alt="rava-masala-dosa" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Rava Masala Dosa</h4>
+                        <h4 class="product-price">&#8377;25</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--onion dosa-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/oniondosa.jpg" alt="oniondosa" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Onion Dosai</h4>
+                        <h4 class="product-price">&#8377;15</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--idli-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/idlli.jfif" alt="idlli" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Idli</h4>
+                        <h4 class="product-price">&#8377;7</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--rava idli-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/rava idli.jpg" alt="ravaidli" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Rava idli</h4>
+                        <h4 class="product-price">&#8377;12</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--Kancheepuram idli-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/kanchipuramidlli.jpg" alt="k-idli" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Kancheepuram Idli</h4>
+                        <h4 class="product-price"> &#8377;15</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!----Pongal----->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/pongal-recipes.jpg" alt="pongal-recipes" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Pongal</h4>
+                        <h4 class="product-price"> &#8377;15</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!----Poori----->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/poori.jfif" alt="poori" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Poori</h4>
+                        <h4 class="product-price"> &#8377;6</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!----moong dal idli----->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/moogdalidlli.jfif" alt="poori" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Moongdal Idli</h4>
+                        <h4 class="product-price"> &#8377;20</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+                </div>
+
+                <button class="anglebtn" id="next"><i class="angleright fa-solid fa-angle-right"></i></button>
+            </div>
+
+
+            <!----product-inventory 3-->
+            <h3 class="food-header">Afternoon Special</h3>
+            <div class="slider-container">
+                <button class="anglebtn" id="prev"><i class="angleleft fa-solid fa-angle-left"></i></button>
+
+                <div class="product-inventory" id="productInventory">
+                    <!--Meals combo-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/mealscombo.jpg" alt="meals" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Meals</h4>
+                        <h4 class="product-price">&#8377;100</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--Briyani-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/briyani.webp" alt="briyani" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Briyani</h4>
+                        <h4 class="product-price">&#8377;130</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--veg Briyani-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/veg-briyani.jpg" alt="veg-briyani" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Veg Briyani</h4>
+                        <h4 class="product-price">&#8377;50</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--lemon rice-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/lemonrice.jpg" alt="lemonrice" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Lemon Rice</h4>
+                        <h4 class="product-price">&#8377;30</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--Curd Rice-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/curdrice.jfif" alt="curdrice" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Curd Rice</h4>
+                        <h4 class="product-price">&#8377;30</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--Tumeric Rice-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/tumericrice.jfif" alt="tumericrice" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Tumeric Rice</h4>
+                        <h4 class="product-price">&#8377;30</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--Sambar Rice-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/sambarrice.JPG" alt="sambarrice" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Sambar Rice</h4>
+                        <h4 class="product-price">&#8377;40</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--Fish rice-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/fish-curry.jpg" alt="fishrice" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Fish Curry Rice</h4>
+                        <h4 class="product-price">&#8377;100</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+                </div>
+
+                <button class="anglebtn" id="next"><i class="angleright fa-solid fa-angle-right"></i></button>
+            </div>
+
+
+            <!---------product-inventory-4------------------>
+            <h3 class="food-header">Dinner Special</h3>
+            <div class="slider-container">
+                <button class="anglebtn" id="prev"><i class="angleleft fa-solid fa-angle-left"></i></button>
+
+                <div class="product-inventory" id="productInventory">
+
+                    <!--fried rice-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/friedrice.webp" alt="friedrice" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Fried rice</h4>
+                        <h4 class="product-price">&#8377;100</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--Chicken Noodles-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/noodles.jpg" alt="noddles" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Chicken Noodle</h4>
+                        <h4 class="product-price">&#8377;100</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--Muttaipodimass-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/podimass.jpg" alt="podimass" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Muttai Podimass</h4>
+                        <h4 class="product-price">&#8377;30</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--tandoori-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/tandoori.jfif" alt="tandoori" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Tandoori</h4>
+                        <h4 class="product-price">&#8377;300</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--panner rice-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/panneerfriedrice.jpg" alt="panneerfriedrice" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Panner Fried Rice</h4>
+                        <h4 class="product-price">&#8377;90</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--mushroom fried rice-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/mushroomfriedrice.jfif" alt="mushroomfriedrice" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Mushroom Fried Rice</h4>
+                        <h4 class="product-price">&#8377;80</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--Veg fried  rice-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/vegfriedrice.jpg" alt="panneerfriedrice" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Veg Fried Rice</h4>
+                        <h4 class="product-price">&#8377;80</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--parota-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/parota.avif" alt="parota" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Parota</h4>
+                        <h4 class="product-price">&#8377;15</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                     <!--chapati-->
+                     <div class="product">
+                        <div class="img-container">
+                            <img src="images/chapathi.jpg" alt="chapati" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Chapati</h4>
+                        <h4 class="product-price">&#8377;10</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+                    <!--Naan-->
+                     <div class="product">
+                        <div class="img-container">
+                            <img src="images/naan.jpg" alt="Naan" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Naan</h4>
+                        <h4 class="product-price">&#8377;15</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--iddlie65-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/idllie65.webp" alt="idli65" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Idli 65</h4>
+                        <h4 class="product-price">&#8377;30</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--podidosa-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/podidosai.jfif" alt="podidosa" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Podi Dosai</h4>
+                        <h4 class="product-price">&#8377;20</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--chetinad chicken-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/chetinadchicken.jfif" alt="chetinadchicken" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Chetinad Chicken</h4>
+                        <h4 class="product-price">&#8377;70</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--chicken grevy-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/customdesign.webp" alt="chickengrevy" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Chicken grevy</h4>
+                        <h4 class="product-price">&#8377;60</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--crab fry-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/crab fry.jfif" alt="crabfry" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Crab Fry</h4>
+                        <h4 class="product-price">&#8377;40</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--fish fry-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/frishfry.jpg" alt="fishfry" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Fish Fry</h4>
+                        <h4 class="product-price">&#8377;30</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--maasi-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/maasiwithchapati.jpg" alt="Maasi" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Maasi side dish</h4>
+                        <h4 class="product-price">&#8377;30</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--semiya-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/semiyaupma.jpg" alt="upma" class="product-img" />
+                        </div>
+                        <h4 class="product-title">vermicelli noodles</h4>
+                        <h4 class="product-price">&#8377;40</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!--semiya-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/semiyaupma.jpg" alt="upma" class="product-img" />
+                        </div>
+                        <h4 class="product-title">vermicelli noodles</h4>
+                        <h4 class="product-price">&#8377;40</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+
+                    <!---chicken masal-->
+                    <div class="product">
+                        <div class="img-container">
+                            <img src="images/tandoorichickenmasala.jpg" alt="chicken masala" class="product-img" />
+                        </div>
+                        <h4 class="product-title">Tandoori Chicken Masala</h4>
+                        <h4 class="product-price">&#8377;90</h4>
+                        <button class="buy">Add cart</button>
+                    </div>
+                </div>
+
+                <button class="anglebtn" id="next"><i class="angleright fa-solid fa-angle-right"></i></button>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!-----Scripiting-->
+    <script src="product.js"></script>
+</body>
+
+</html>
